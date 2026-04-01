@@ -31,6 +31,8 @@ Developer
               └──► Amazon DynamoDB: story-table-cb599c80  (stores metadata)
 ```
 
+<img width="1216" height="875" alt="Gemini_Generated_Image_d0ndgbd0ndgbd0nd" src="https://github.com/user-attachments/assets/1dc55b02-7adc-4d37-8fa2-b1c479927f13" />
+
 ---
 
 ## Tech Stack
@@ -89,6 +91,7 @@ The Lambda function uses two environment variables configured in the AWS Console
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Built as a hands-on cloud project to explore serverless architecture, generative AI integration, and AI-assisted development on AWS.
+**Pravesh Kumar**
+📬 [LinkedIn](https://www.linkedin.com/in/pravesh22) · [GitHub](https://github.com/pravesh2201)

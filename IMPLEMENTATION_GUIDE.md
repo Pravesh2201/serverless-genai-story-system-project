@@ -268,6 +268,8 @@ The execution log will show the generated story text in JSON format. A status of
 ```
 <img width="1428" height="531" alt="Screenshot 2026-03-31 at 11 57 21 PM" src="https://github.com/user-attachments/assets/3fd48f9e-b2e5-4937-8dd7-1efba4fce44e" />
 
+<img width="654" height="384" alt="Screenshot 2026-03-31 at 11 57 41 PM" src="https://github.com/user-attachments/assets/2c93a10f-f928-492b-a878-0fd4d89e831c" />
+
 ---
 
 ## Step 10 — Verify Metadata in DynamoDB (Optional Enhancement)

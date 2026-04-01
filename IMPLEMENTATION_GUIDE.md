@@ -26,6 +26,8 @@ Amazon Bedrock hosts the Nova Pro foundation model that generates the stories.
 
 **Model used:** `amazon.nova-pro-v1:0`
 
+<img width="1448" height="616" alt="Screenshot 2026-03-31 at 11 40 58 PM" src="https://github.com/user-attachments/assets/4d855e12-bd0e-40c9-9d0b-0cddbbebc790" />
+
 ---
 
 ## Step 2 — Create the S3 Bucket
@@ -40,6 +42,9 @@ The S3 bucket stores each generated story as a `.txt` file.
 6. Click **Create bucket**
 
 The Lambda function will write files to this bucket automatically. No manual uploads needed.
+
+<img width="1453" height="628" alt="S3_bucket" src="https://github.com/user-attachments/assets/c8655aa2-2346-4cf4-9f3a-f0cf104807dd" />
+
 
 ---
 
@@ -58,6 +63,7 @@ The DynamoDB table stores metadata about each generated story.
 9. Click **Create table**
 
 Wait for the table status to show **Active** (green checkmark) before proceeding.
+<img width="1470" height="407" alt="Screenshot 2026-03-31 at 11 58 39 PM" src="https://github.com/user-attachments/assets/61836af0-5c5f-4a1d-b4f6-2bccdd94cf9e" />
 
 ---
 
@@ -73,6 +79,7 @@ The Lambda function is the brain — it calls Bedrock, saves to S3, and writes t
 6. Package type: **Zip**
 7. Architecture: **x86_64** (default)
 8. Click **Create function**
+<img width="1464" height="436" alt="Screenshot 2026-03-31 at 11 42 01 PM" src="https://github.com/user-attachments/assets/37de0486-7784-45b6-9bf7-e4d281dc807c" />
 
 ### Configure General Settings
 
@@ -84,6 +91,7 @@ Go to **Configuration → General configuration → Edit:**
 - SnapStart: `None`
 
 Click **Save**.
+<img width="1448" height="300" alt="Screenshot 2026-03-31 at 11 43 55 PM" src="https://github.com/user-attachments/assets/5a564700-75b8-4766-9ee3-ce177a92e2a3" />
 
 ---
 
@@ -101,6 +109,7 @@ The Lambda function reads the S3 bucket name and DynamoDB table name from enviro
 | `TABLE_NAME` | `story-table-<your-unique-id>` |
 
 4. Click **Save**
+<img width="960" height="654" alt="Screenshot 2026-03-31 at 11 43 31 PM" src="https://github.com/user-attachments/assets/2e81791b-806f-4e0c-9635-8c9af6a2b087" />
 
 ---
 
@@ -142,6 +151,7 @@ import os
 5. After each comment, press **Enter** and wait for Amazon Q to suggest the code
 6. Press **Tab** to accept a suggestion, or keep typing to write your own
 7. Repeat for each section until the function is complete
+
 
 ### Final Lambda Function Structure
 
@@ -242,6 +252,7 @@ The Lambda execution role needs permissions to call Bedrock, S3, and DynamoDB.
 The execution log will show the generated story text in JSON format. A status of **Succeeded** confirms everything worked.
 
 ---
+<img width="1447" height="707" alt="Screenshot 2026-03-31 at 11 56 58 PM" src="https://github.com/user-attachments/assets/a5719e9f-740f-45b0-abb3-3fa1d2928586" />
 
 ## Step 9 — Verify the Story in S3
 
@@ -255,6 +266,7 @@ The execution log will show the generated story text in JSON format. A status of
   "story": "In a quaint little town, there lived two cats named Whiskers and Shadow..."
 }
 ```
+<img width="1428" height="531" alt="Screenshot 2026-03-31 at 11 57 21 PM" src="https://github.com/user-attachments/assets/3fd48f9e-b2e5-4937-8dd7-1efba4fce44e" />
 
 ---
 
@@ -287,6 +299,8 @@ To add full metadata writing using Amazon Q Developer:
 4. Run the test again and verify the item appears in DynamoDB
 
 ---
+<img width="1465" height="593" alt="Screenshot 2026-03-31 at 11 59 31 PM" src="https://github.com/user-attachments/assets/10e536d7-0810-4387-b131-b0608212e6ba" />
+
 
 ## Architecture Summary
 
@@ -334,6 +348,7 @@ This project runs almost entirely within AWS Free Tier for personal testing.
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Built as a hands-on cloud project exploring serverless architecture, generative AI integration on Amazon Bedrock, and AI-assisted development using Amazon Q Developer.
+**Pravesh Kumar**
+📬 [LinkedIn](https://www.linkedin.com/in/pravesh22) · [GitHub](https://github.com/pravesh2201)
